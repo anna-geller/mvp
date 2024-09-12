@@ -15,6 +15,9 @@ services:
     type: postgresql:16
 
 routes:
+  "https://{default}/":
+    type: upstream
+    upstream: kestra:http
   "https://{default}/ui/":
     type: upstream
     upstream: kestra:http
