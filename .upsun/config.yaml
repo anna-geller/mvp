@@ -9,6 +9,8 @@ applications:
       kestra-storage:
         source: storage
         source_path: kestra-storage
+    relationships:
+      database: "postgresql:postgresql"
 
 services:
   postgresql:
