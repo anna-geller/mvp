@@ -4,7 +4,7 @@ applications:
     type: 'java:21'
     web:
       commands:
-        start: kestra/kestra-latest server standalone --config ./kestra/kestra.yaml --port=$PORT
+        start: kestra/kestra-latest server standalone --config ./kestra/kestra.yaml --port=$PORT --plugins="./kestra/plugins"
     mounts:
       kestra-storage:
         source: storage
